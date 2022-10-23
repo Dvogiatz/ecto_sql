@@ -660,7 +660,7 @@ defmodule Ecto.Migration do
         add :price, :decimal
       end
       
-      create table("daily_prices", primary_key: false, options: "PARTITION BY RANGE (date)) do
+      create table("daily_prices", primary_key: false, options: "PARTITION BY RANGE (date)") do
         add :name, :string, primary_key: true
         add :date, :date, primary_key: true
         add :price, :decimal
